@@ -1,13 +1,10 @@
 import 'dart:async';
-import 'package:weatherapp/service/network.dart';
+import 'package:weatherapp/service/networkcall.dart';
+import 'package:weatherapp/utilities/contant.dart';
 
-const apiKey = '05d0c2d8e1448416585f5ad3798d0d57';
-var url =
-    'https://api.openweathermap.org/data/2.5/weather?q=lagos&appid=$apiKey';
-
-class WeatherAp {
+class LagosApi {
   Future<dynamic> getWeather() async {
-    NetworkCall networkCall = NetworkCall(url);
+    NetworkCall networkCall = NetworkCall(urlLagos);
     var weatherData = await networkCall.getData();
     return weatherData;
   }

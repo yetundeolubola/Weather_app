@@ -1,12 +1,11 @@
 import 'dart:async';
-import 'package:weatherapp/service/network.dart';
-import 'package:weatherapp/screen/loading_screen.dart';
+import 'package:weatherapp/service/networkcall.dart';
+import 'package:weatherapp/utilities/contant.dart';
 
-const apiKey = '05d0c2d8e1448416585f5ad3798d0d57';
-var url =
-    'https://api.openweathermap.org/data/2.5/weather?q=ibadan&appid=$apiKey';
+const url =
+    'https://api.openweathermap.org/data/2.5/weather?q=ibadan&appid=$apiKey&units=metric';
 
-class WeatherApi {
+class IbadanApi {
   Future<dynamic> getWeather() async {
     NetworkCall networkCall = NetworkCall(url);
     var weatherData = await networkCall.getData();

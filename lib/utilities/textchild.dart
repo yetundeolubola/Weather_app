@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:weatherapp/utilities/contant.dart';
 
-class IconWidget extends StatelessWidget {
-  final String nameIcons;
-  final String nameVar;
+class TextChild extends StatelessWidget {
+  final String weatherIcon;
   final String weatherVar;
+  final String weatherTxt;
 
-  IconWidget(
-      {@required this.nameIcons,
-      @required this.nameVar,
-      @required this.weatherVar});
+  TextChild(
+      {@required this.weatherIcon,
+      @required this.weatherVar,
+      @required this.weatherTxt});
 
   @override
   Widget build(BuildContext context) {
@@ -17,21 +17,21 @@ class IconWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          nameIcons,
+          weatherIcon,
           style: kIconColor,
         ),
         SizedBox(
           height: 15.0,
         ),
         Text(
-          nameVar,
+          weatherVar,
           style: kLabelTextStyle,
         ),
         SizedBox(
           height: 15.0,
         ),
         Text(
-          weatherVar,
+          weatherTxt,
           style: kLabelTextStyle,
         )
       ],
